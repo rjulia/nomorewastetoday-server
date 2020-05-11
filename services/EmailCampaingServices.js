@@ -1,4 +1,4 @@
-const { RESTDataSource } = require('apollo-datasource-rest');
+const { RESTDataSource } = require("apollo-datasource-rest");
 
 class EmailCampaingServices extends RESTDataSource {
   constructor() {
@@ -11,18 +11,15 @@ class EmailCampaingServices extends RESTDataSource {
   // }
 
   async getEmailCampaing() {
-    console.log("here")
     try {
       const emails = await this.get(`members`, undefined, {
         headers: {
-          'Authorization': process.env.MAILCHIP_AUTH
-        }
+          Authorization: process.env.MAILCHIP_AUTH,
+        },
       });
-      console.log(emails)
-      return emails
-
+      return emails;
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
   }
 
@@ -31,13 +28,13 @@ class EmailCampaingServices extends RESTDataSource {
     try {
       const emailSave = await this.post(`members`, email, {
         headers: {
-          'Authorization': process.env.MAILCHIP_AUTH
-        }
+          Authorization: process.env.MAILCHIP_AUTH,
+        },
       });
-      console.log("email res ", emailSave)
-      return emailSave
+      console.log("email res ", emailSave);
+      return emailSave;
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
   }
 
@@ -48,4 +45,4 @@ class EmailCampaingServices extends RESTDataSource {
   // }
 }
 
-module.exports = EmailCampaingServices
+module.exports = EmailCampaingServices;
