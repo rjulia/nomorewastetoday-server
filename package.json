@@ -1,0 +1,57 @@
+{
+  "name": "apollo-react-heroku",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js --ignore client",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": " npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "engines": {
+    "node": "10.15.0",
+    "npm": "6.12.0"
+  },
+  "heroku-run-build-script": true,
+  "author": "Ramon Julia",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-datasource-rest": "^0.6.4",
+    "apollo-server": "^2.6.8",
+    "apollo-server-express": "^2.6.8",
+    "assert": "^2.0.0",
+    "axios": "^0.19.0",
+    "bcrypt": "^3.0.6",
+    "concurrently": "^4.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "express-graphql": "^0.8.0",
+    "graphql": "^14.4.2",
+    "graphql-import": "^0.7.1",
+    "graphql-tools": "^4.0.5",
+    "graphql-upload": "^8.0.7",
+    "helmet": "^3.21.1",
+    "helmet-csp": "^2.9.3",
+    "http-proxy-middleware": "^0.19.1",
+    "install": "^0.13.0",
+    "jsonwebtoken": "^8.5.1",
+    "lowdb": "^1.0.0",
+    "mkdirp": "^0.5.1",
+    "mongodb": "^3.2.7",
+    "mongoose": "^5.6.4",
+    "nodemailer": "^6.4.6",
+    "nodemailer-sendgrid": "^1.0.3",
+    "npm": "^6.14.4",
+    "promises-all": "^1.0.0",
+    "shortid": "^2.2.14"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "nodemon": "^1.19.1"
+  }
+}

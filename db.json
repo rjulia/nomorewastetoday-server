@@ -1,0 +1,22 @@
+{
+  "uploads": [
+    {
+      "id": "aaKYZkMZb",
+      "filename": "a-dribbb.jpg",
+      "mimetype": "image/jpeg",
+      "path": "./uploads/aaKYZkMZb-a-dribbb.jpg"
+    },
+    {
+      "id": "umHTS_jXW",
+      "filename": "hk.jpg",
+      "mimetype": "image/jpeg",
+      "path": "./uploads/umHTS_jXW-hk.jpg"
+    },
+    {
+      "id": "3nPuAUFxv",
+      "filename": "hk.jpg",
+      "mimetype": "image/jpeg",
+      "path": "./uploads/3nPuAUFxv-hk.jpg"
+    }
+  ]
+}
