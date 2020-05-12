@@ -26,23 +26,35 @@ class EmailCampaingServices extends RESTDataSource {
   // an example making an HTTP POST request
   async postEmailCampaing(email) {
     try {
-      const emailSave = await this.post(`members`, email, {
+      const emailRes = await this.post(`members`, email, {
         headers: {
           Authorization: process.env.MAILCHIP_AUTH,
         },
       });
-      console.log("email res ", emailSave);
-      return emailSave;
+      return {
+        status: "success",
+        res: emailRes.email_address,
+      };
+    } catch (error) {
+      return {
+        status: "error",
+        res: error.extensions.response.body,
+      };
+    }
+  }
+
+  async deleteEmailCampaing(email) {
+    try {
+      const emailDetete = await this.delete(`members`, email, {
+        headers: {
+          Authorization: process.env.MAILCHIP_AUTH,
+        },
+      });
+      return emailDetete;
     } catch (error) {
       console.log(error);
     }
   }
-
-  // async deleteEmailCampaing(movie) {
-  //   return this.delete(
-  //     `emails/${movie.id}`, // path
-  //   );
-  // }
 }
 
 module.exports = EmailCampaingServices;
