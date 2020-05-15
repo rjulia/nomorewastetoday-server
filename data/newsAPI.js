@@ -1,21 +1,21 @@
-const { RESTDataSource } = require('apollo-datasource-rest');
+const { RESTDataSource } = require("apollo-datasource-rest");
 
 class NewsAPI extends RESTDataSource {
   constructor() {
-    super()
+    super();
     // this.baseURL = 'https://newsapi.org/v2/everything'
-    this.baseURL = process.env.APP_API
-
+    this.baseURL = process.env.APP_API;
   }
 
-  async getNewsInfo() {
+  async getNewsInfo(numberNews = 4) {
     try {
-      const data = await this.get(`?sources=&apiKey=${process.env.APP_API_KEY}&pageSize=10&page=1&q=recycling, hong kong`)
-      return data
+      const data = await this.get(
+        `?sources=&apiKey=${process.env.APP_API_KEY}&pageSize=${numberNews}&page=1&q=recycling, hong kong`
+      );
+      return data;
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
   }
-
 }
-module.exports = NewsAPI
+module.exports = NewsAPI;
