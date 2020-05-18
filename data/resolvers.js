@@ -463,6 +463,7 @@ const resolvers = {
           facebook: input.facebook,
           category: input.category,
           recomendations: input.recomendations,
+          stateEvent: input.stateEvent,
         });
         newEvent.id = newEvent._id;
 

@@ -90,6 +90,7 @@ const typeDefs = gql`
     facebook: String
     recomendations: String
     category: [TypeEventCategory]
+    stateEvent: TypeEventState
   }
 
   type Shop {
@@ -249,6 +250,13 @@ const typeDefs = gql`
     OUTDOOR
     COMMUNITY
   }
+
+  enum TypeEventState {
+    POSTPONED
+    CANCEL
+    ONGOING
+  }
+
   enum TypeShopCategory {
     FOOD
     CATERING
@@ -423,6 +431,7 @@ const typeDefs = gql`
     facebook: String
     recomendations: String
     category: [TypeEventCategory]
+    stateEvent: TypeEventState
   }
 
   """
