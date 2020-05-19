@@ -264,6 +264,9 @@ const typeDefs = gql`
     HEALTHCARE
     CLOTHES
     SPORTS
+    CLEANING
+    BABY
+    COSMETICS
     OTHERS
   }
 
